@@ -1,19 +1,17 @@
-* [中文版本](README_cn.md)
-
 # Arduino Lua
 
-This Arduino library provides the [lua](https://www.lua.org/) 5.3.6 ( [release](https://www.lua.org/ftp/lua-5.3.6.tar.gz) ) scripting engine for ESP8266/ESP32/ArduinoUnoR4 sketches. This allows dynamic execution of Lua code on the Arduino without having to compile and flash a new firmware.
+本Arduino扩展库为ESP8266/ESP32/ArduinoUnoR4提供 [lua](https://www.lua.org/) 5.3.6 ([正式版](https://www.lua.org/ftp/lua-5.3.6.tar.gz)) 的脚本运行引擎。 使用该扩展库，可以在Arduino上动态运行Lua代码，而不必重新编译和烧录固件。
 
-Along with the Lua 5.3.6 Core the following Lua standard libraries are included:
+除了 Lua 5.3.6 核心功能以外，还包含了如下的 Lua 标准库：
 
 - base (print(), tostring(), tonumber(), etc.)
 - math
 - table (insert(), sort(), remove(), ...)
 - string (len(), match(), ...)
 
-##  Sample sketch example: ExecuteScriptFromSerial.ino
+##  示例: ExecuteScriptFromSerial.ino
 
-After installing the library, some sketch examples are available from the *File* menu, then *Examples* and finally under *Arduino-Lua*. The examples include **ExecuteScriptFromSerial** which takes a lua script from the serial line and executes it. As an example, the following standard Arduino functions are available in lua scripts as bindings:
+安装本扩展后，在 *File* 菜单中的 *Examples* 下的 *Arduino-Lua* 中 会提供部分示例。示例中包含 **ExecuteScriptFromSerial** ，可以通过串口输入 Lua 脚本并执行。例如，如下的标准 Arduino 函数，可以被绑定从而在 lua 脚本中使用：
 
 - pinMode()
 - digitalWrite()
@@ -23,8 +21,10 @@ After installing the library, some sketch examples are available from the *File*
 
 ```
 # Enter the lua script and press Control-D when finished:
+# 输入如下的 lua脚本，然后按 Ctrl+D 运行:
 print("My first test!")
 # Executing script:
+# 运行脚本:
 My first test!
 
 
@@ -57,7 +57,7 @@ end
 LED on
 LED off
 ```
-## Resources Used (ExecuteScriptFromSerial.ino)
+## 资源使用 (ExecuteScriptFromSerial.ino)
 
 **ESP8266:**
 Sketch uses 327776 bytes (31%) of program storage space. Maximum is 1044464 bytes.
@@ -71,7 +71,7 @@ Global variables use 15388 bytes (4%) of dynamic memory, leaving 312292 bytes fo
 Sketch uses 133756 bytes (51%) of program storage space. Maximum is 262144 bytes.
 Global variables use 2836 bytes (8%) of dynamic memory, leaving 29932 bytes for local variables. Maximum is 32768 bytes.
 
-## Arduino IDE Library example: HelloWorld.ino
+## 示例: HelloWorld.ino
 ```
 #include <LuaWrapper.h>
 
@@ -87,7 +87,7 @@ void loop() {
 
 }
 ```
-## Resources Used (HelloWorld.ino)
+## 资源使用 (HelloWorld.ino)
 
 **ESP8266:**
 Sketch uses 365276 bytes (34%) of program storage space. Maximum is 1044464 bytes.
@@ -97,6 +97,6 @@ Global variables use 34712 bytes (42%) of dynamic memory, leaving 47208 bytes fo
 Sketch uses 309913 bytes (23%) of program storage space. Maximum is 1310720 bytes.
 Global variables use 15388 bytes (4%) of dynamic memory, leaving 312292 bytes for local variables. Maximum is 327680 bytes.
 
-## The Lua Language:
-[Lua 5.3 Reference Manual](https://www.lua.org/manual/5.3/)
+## Lua 语言:
+[Lua 5.3 参考手册](https://www.lua.org/manual/5.3/)
 
