@@ -79,6 +79,10 @@ Global variables use 15388 bytes (4%) of dynamic memory, leaving 312292 bytes fo
 Sketch uses 133756 bytes (51%) of program storage space. Maximum is 262144 bytes.
 Global variables use 2836 bytes (8%) of dynamic memory, leaving 29932 bytes for local variables. Maximum is 32768 bytes.
 
+**Raspberry Pi Pico:**
+Sketch uses 124736 bytes (5%) of program storage space. Maximum is 2093056 bytes.
+Global variables use 10352 bytes (3%) of dynamic memory, leaving 251792 bytes for local variables. Maximum is 262144 bytes.
+
 ## 示例: HelloWorld.ino
 ```
 #include <LuaWrapper.h>
