@@ -1,9 +1,5 @@
 print(string.format("Lua version is %s", _VERSION))
 
-INPUT = 0
-OUTPUT = 1
-HIGH = 1
-LOW = 0
 LED_BUILTIN = 13
 
 pinMode(LED_BUILTIN, OUTPUT)
