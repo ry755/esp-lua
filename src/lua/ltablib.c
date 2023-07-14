@@ -256,13 +256,13 @@ typedef unsigned int IdxT;
 ** is to copy them to an array of a known type and use the array values.
 */
 static unsigned int l_randomizePivot (void) {
-//  clock_t c = clock();
+  // clock_t c = clock();
   time_t t = time(NULL);
-//  unsigned int buff[sof(c) + sof(t)];
+  // unsigned int buff[sof(c) + sof(t)];
   unsigned int buff[sof(t)];
   unsigned int i, rnd = 0;
-//  memcpy(buff, &c, sof(c) * sizeof(unsigned int));
-//  memcpy(buff + sof(c), &t, sof(t) * sizeof(unsigned int));
+  // memcpy(buff, &c, sof(c) * sizeof(unsigned int));
+  // memcpy(buff + sof(c), &t, sof(t) * sizeof(unsigned int));
   memcpy(buff, &t, sof(t) * sizeof(unsigned int));
   for (i = 0; i < sof(buff); i++)
     rnd += buff[i];
