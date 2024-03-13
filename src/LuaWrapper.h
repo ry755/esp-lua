@@ -9,6 +9,7 @@
 class LuaWrapper {
   public:
     LuaWrapper();
+    ~LuaWrapper();
     String Lua_dostring(const String *script);
     void Lua_register(const String name, const lua_CFunction function);
 

@@ -32,6 +32,10 @@ LuaWrapper::LuaWrapper() {
   lua_register(_state, "print", lua_wrapper_print);
 }
 
+LuaWrapper::~LuaWrapper() {
+  lua_close(_state);
+}
+
 String LuaWrapper::Lua_dostring(const String *script) {
   String scriptWithConstants = addConstants() + *script;
   String result;
